@@ -1,0 +1,74 @@
+# depslib dependency file v1.0
+1447679161 source:/home/nishant/RocketClassifier/main.cpp
+	<iostream>
+	<string>
+	"Parser.h"
+
+1447679099 source:/home/nishant/RocketClassifier/src/Parser.cpp
+	"Parser.h"
+	"gumbo.h"
+
+1447678805 /home/nishant/RocketClassifier/include/Parser.h
+	<iostream>
+	<vector>
+	<string>
+	<fstream>
+	<stdlib.h>
+	<boost/tokenizer.hpp>
+	<cctype>
+	"gumbo.h"
+	"../stem/stemming/english_stem.h"
+
+1447668480 /usr/local/include/gumbo.h
+	<stdbool.h>
+	<stddef.h>
+	"tag_enum.h"
+
+1447668480 /usr/local/include/tag_enum.h
+
+1432985234 /home/nishant/RocketClassifier/stem/stemming/english_stem.h
+	"stemming.h"
+
+1432985234 /home/nishant/RocketClassifier/stem/stemming/stemming.h
+	<algorithm>
+	"../indexing/string_util.h"
+	"../indexing/common_lang_constants.h"
+
+1432985234 /home/nishant/RocketClassifier/stem/indexing/string_util.h
+	<cstdio>
+	<cstdlib>
+	<memory>
+	<cwctype>
+	<cctype>
+	<cstring>
+	<cwchar>
+	<cstddef>
+	<string>
+	<functional>
+	<cassert>
+	<clocale>
+	<stdexcept>
+	"common_lang_constants.h"
+	"../utilities/safe_math.h"
+	"../utilities/utilities.h"
+	"../utilities/debug_logic.h"
+
+1432985234 /home/nishant/RocketClassifier/stem/indexing/common_lang_constants.h
+	<cwctype>
+
+1432985234 /home/nishant/RocketClassifier/stem/utilities/safe_math.h
+	<cmath>
+	<cassert>
+	<functional>
+
+1432985234 /home/nishant/RocketClassifier/stem/utilities/utilities.h
+	<algorithm>
+	<functional>
+	<cmath>
+	<cassert>
+
+1432985234 /home/nishant/RocketClassifier/stem/utilities/debug_logic.h
+	<iostream>
+	<fstream>
+	<iterator>
+

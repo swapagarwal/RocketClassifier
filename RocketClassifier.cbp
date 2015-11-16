@@ -32,8 +32,11 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
-			<Add option="-fexceptions" />
+			<Add option="-fexceptions `pkg-config --cflags --libs gumbo`" />
 		</Compiler>
+		<Linker>
+			<Add option="`pkg-config --libs gumbo`" />
+		</Linker>
 		<Unit filename="include/Parser.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Parser.cpp" />
@@ -41,7 +44,9 @@
 			<code_completion />
 			<envvars />
 			<debugger />
-			<lib_finder disable_auto="1" />
+			<lib_finder disable_auto="1">
+				<lib name="gumbo" />
+			</lib_finder>
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>
