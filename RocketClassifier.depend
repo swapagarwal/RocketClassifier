@@ -1,15 +1,27 @@
 # depslib dependency file v1.0
-1447734406 source:/home/nishant/RocketClassifier/main.cpp
+15051376 <<<<<<< Updated upstream
+
+1447762139 source:/home/nishant/RocketClassifier/main.cpp
 	<iostream>
 	<string>
 	"Parser.h"
 	"Reader.h"
 
-1447731266 source:/home/nishant/RocketClassifier/src/Parser.cpp
+1447679964 shed changes
+	<iostream>
+	<string>
+	"Parser.h"
+	"Reader.h"
 	"Parser.h"
 	"gumbo.h"
 
-1447731266 /home/nishant/RocketClassifier/include/Parser.h
+1447679939 ated upstream
+
+1447762129 source:/home/nishant/RocketClassifier/src/Parser.cpp
+	"Parser.h"
+	"gumbo.h"
+
+1447758625 /home/nishant/RocketClassifier/include/Parser.h
 	<iostream>
 	<vector>
 	<string>
@@ -20,22 +32,22 @@
 	"gumbo.h"
 	"../stem/stemming/english_stem.h"
 
-1447723922 /usr/local/include/gumbo.h
+1447668480 /usr/local/include/gumbo.h
 	<stdbool.h>
 	<stddef.h>
 	"tag_enum.h"
 
-1447723922 /usr/local/include/tag_enum.h
+1447668480 /usr/local/include/tag_enum.h
 
-1447724294 /home/nishant/RocketClassifier/stem/stemming/english_stem.h
+1432985234 /home/nishant/RocketClassifier/stem/stemming/english_stem.h
 	"stemming.h"
 
-1447724294 /home/nishant/RocketClassifier/stem/stemming/stemming.h
+1432985234 /home/nishant/RocketClassifier/stem/stemming/stemming.h
 	<algorithm>
 	"../indexing/string_util.h"
 	"../indexing/common_lang_constants.h"
 
-1447724294 /home/nishant/RocketClassifier/stem/indexing/string_util.h
+1432985234 /home/nishant/RocketClassifier/stem/indexing/string_util.h
 	<cstdio>
 	<cstdlib>
 	<memory>
@@ -54,30 +66,33 @@
 	"../utilities/utilities.h"
 	"../utilities/debug_logic.h"
 
-1447724294 /home/nishant/RocketClassifier/stem/indexing/common_lang_constants.h
+1432985234 /home/nishant/RocketClassifier/stem/indexing/common_lang_constants.h
 	<cwctype>
 
-1447724294 /home/nishant/RocketClassifier/stem/utilities/safe_math.h
+1432985234 /home/nishant/RocketClassifier/stem/utilities/safe_math.h
 	<cmath>
 	<cassert>
 	<functional>
 
-1447724294 /home/nishant/RocketClassifier/stem/utilities/utilities.h
+1432985234 /home/nishant/RocketClassifier/stem/utilities/utilities.h
 	<algorithm>
 	<functional>
 	<cmath>
 	<cassert>
 
-1447724294 /home/nishant/RocketClassifier/stem/utilities/debug_logic.h
+1432985234 /home/nishant/RocketClassifier/stem/utilities/debug_logic.h
 	<iostream>
 	<fstream>
 	<iterator>
 
-1447734353 source:/home/nishant/RocketClassifier/src/Reader.cpp
+1447762004 source:/home/nishant/RocketClassifier/src/Reader.cpp
 	"Reader.h"
+	"Parser.h"
 
-1447733129 /home/nishant/RocketClassifier/include/Reader.h
+1447762066 /home/nishant/RocketClassifier/include/Reader.h
 	<boost/filesystem.hpp>
 	<iostream>
+	<fstream>
+	<map>
 	<boost/foreach.hpp>
 

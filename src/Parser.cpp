@@ -44,7 +44,6 @@ void Parser::tokenize(std::string in) {
     std::wstring word(t.begin(), t.end());
     StemEnglish(word);
     string op(word.begin(), word.end());
-    cerr << op << ' ';
     parsed_out.push_back(op);
   }
 }

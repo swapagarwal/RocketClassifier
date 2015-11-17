@@ -44,7 +44,28 @@
 		<Unit filename="include/Reader.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Parser.cpp" />
+<<<<<<< Updated upstream
 		<Unit filename="src/Reader.cpp" />
+=======
+		<Unit filename="stem/indexing/common_lang_constants.h" />
+		<Unit filename="stem/indexing/string_util.h" />
+		<Unit filename="stem/stemming/danish_stem.h" />
+		<Unit filename="stem/stemming/dutch_stem.h" />
+		<Unit filename="stem/stemming/english_stem.h" />
+		<Unit filename="stem/stemming/finnish_stem.h" />
+		<Unit filename="stem/stemming/french_stem.h" />
+		<Unit filename="stem/stemming/german_stem.h" />
+		<Unit filename="stem/stemming/italian_stem.h" />
+		<Unit filename="stem/stemming/norwegian_stem.h" />
+		<Unit filename="stem/stemming/portuguese_stem.h" />
+		<Unit filename="stem/stemming/russian_stem.h" />
+		<Unit filename="stem/stemming/spanish_stem.h" />
+		<Unit filename="stem/stemming/stemming.h" />
+		<Unit filename="stem/stemming/swedish_stem.h" />
+		<Unit filename="stem/utilities/debug_logic.h" />
+		<Unit filename="stem/utilities/safe_math.h" />
+		<Unit filename="stem/utilities/utilities.h" />
+>>>>>>> Stashed changes
 		<Extensions>
 			<code_completion />
 			<envvars />
