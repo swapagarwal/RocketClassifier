@@ -31,18 +31,20 @@ std::string Parser::cleantext(GumboNode* node) {
 }
 
 void Parser::tokenize(std::string in) {
-    std::string alphain;
-    for (auto& c : in) {
-      if (isalpha(c) || isspace(c))
-        alphain.push_back(tolower(c));
+  std::string alphain;
+  for (auto& c : in) {
+    if (isalpha(c) || isspace(c)) {
+      alphain.push_back(tolower(c));
     }
-    stemming::english_stem<> StemEnglish;
-    boost::char_separator<char> sep(".,\n ");
-    boost::tokenizer<boost::char_separator<char>> tokens(alphain, sep);
-    for (const auto& t : tokens) {
-        std::wstring word(t.begin(), t.end());
-        StemEnglish(word);
-        string op(word.begin(), word.end());
-        parsed_out.push_back(op);
-    }
+  }
+  stemming::english_stem<> StemEnglish;
+  boost::char_separator<char> sep(".,\n ");
+  boost::tokenizer<boost::char_separator<char>> tokens(alphain, sep);
+  for (const auto& t : tokens) {
+    std::wstring word(t.begin(), t.end());
+    StemEnglish(word);
+    string op(word.begin(), word.end());
+    cerr << op << ' ';
+    parsed_out.push_back(op);
+  }
 }

@@ -15,6 +15,9 @@
 					<Add option="-g" />
 					<Add directory="include" />
 				</Compiler>
+				<Linker>
+					<Add option="-lboost_filesystem" />
+				</Linker>
 			</Target>
 			<Target title="Release">
 				<Option output="bin/Release/RocketClassifier" prefix_auto="1" extension_auto="1" />
@@ -38,8 +41,10 @@
 			<Add option="`pkg-config --libs gumbo`" />
 		</Linker>
 		<Unit filename="include/Parser.h" />
+		<Unit filename="include/Reader.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Parser.cpp" />
+		<Unit filename="src/Reader.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
