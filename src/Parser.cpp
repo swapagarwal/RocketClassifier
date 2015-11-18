@@ -33,12 +33,12 @@ std::string Parser::cleantext(GumboNode* node) {
 void Parser::tokenize(std::string in) {
   std::string alphain;
   for (auto& c : in) {
-    if (isalpha(c) || isspace(c)) {
+    if (c >= 32 && c < 128) {
       alphain.push_back(tolower(c));
     }
   }
   stemming::english_stem<> StemEnglish;
-  boost::char_separator<char> sep(".,\n ");
+  boost::char_separator<char> sep(".,:-\n\t ");
   boost::tokenizer<boost::char_separator<char>> tokens(alphain, sep);
   for (const auto& t : tokens) {
     std::wstring word(t.begin(), t.end());

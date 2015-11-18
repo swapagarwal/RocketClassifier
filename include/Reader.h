@@ -13,14 +13,18 @@ class Reader {
 public:
   Reader(std::string);
   void ReadDir(std::string);
-  std::vector<std::string> ReadFile(std::string);
+  static std::vector<std::string> ReadFile(std::string);
   std::map<std::string, int> GetWordCount() {
     return word_count;
+  }
+  int GetFileCount() {
+    return file_count;
   }
 protected:
 private:
   std::vector<std::string> words_dump;
   std::map<std::string, int> word_count;
+  int file_count;
 };
 
 #endif // READER_H

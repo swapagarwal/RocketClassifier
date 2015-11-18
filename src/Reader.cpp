@@ -2,6 +2,7 @@
 #include "Parser.h"
 
 Reader::Reader(std::string in_dir) {
+  file_count = 0;
   ReadDir(in_dir);
   for (string& word : words_dump) {
     word_count[word]++;
@@ -16,6 +17,7 @@ void Reader::ReadDir(std::string in_dir) {
       boost::filesystem::directory_iterator it( pth ), eod;
       BOOST_FOREACH( boost::filesystem::path const & p, std::make_pair( it, eod ) ) {
         auto words = ReadFile(p.string());
+        file_count++;
         out.insert(std::end(out), std::begin(words), std::end(words));
       }
     } else {

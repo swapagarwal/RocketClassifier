@@ -1,12 +1,11 @@
 #include <iostream>
 #include <string>
-#include "Parser.h"
-#include "Reader.h"
+#include "Bayes.h"
 
 using namespace std;
 
 int main() {
-  Reader r("./train");
-  auto x = r.GetWordCount();
+  Bayes b;
+  b.test("./train/spam/test");
   return 0;
 }

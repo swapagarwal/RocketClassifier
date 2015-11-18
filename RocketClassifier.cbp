@@ -40,13 +40,13 @@
 		<Linker>
 			<Add option="`pkg-config --libs gumbo`" />
 		</Linker>
+		<Unit filename="include/Bayes.h" />
 		<Unit filename="include/Parser.h" />
 		<Unit filename="include/Reader.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Bayes.cpp" />
 		<Unit filename="src/Parser.cpp" />
-<<<<<<< Updated upstream
 		<Unit filename="src/Reader.cpp" />
-=======
 		<Unit filename="stem/indexing/common_lang_constants.h" />
 		<Unit filename="stem/indexing/string_util.h" />
 		<Unit filename="stem/stemming/danish_stem.h" />
@@ -65,7 +65,6 @@
 		<Unit filename="stem/utilities/debug_logic.h" />
 		<Unit filename="stem/utilities/safe_math.h" />
 		<Unit filename="stem/utilities/utilities.h" />
->>>>>>> Stashed changes
 		<Extensions>
 			<code_completion />
 			<envvars />
