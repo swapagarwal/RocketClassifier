@@ -15,11 +15,12 @@ Bayes::Bayes()
 }
 
 void Bayes::train() {
-  Reader spam_reader(spam_path), ham_reader(ham_path);
   DEBUG std::cerr << "Training spam\n";
+  Reader spam_reader(spam_path);
   spam_words = spam_reader.GetWordCount();
   spam_count = spam_reader.GetFileCount();
   DEBUG std::cerr << "Training non-spam\n";
+  Reader ham_reader(ham_path);
   ham_words = ham_reader.GetWordCount();
   ham_count = ham_reader.GetFileCount();
   DEBUG std::cerr << "Trained with " << spam_count << " spam with "<< spam_words.size() << " words and " << ham_count << " non-spam documents with " << ham_words.size() << " words.\n";

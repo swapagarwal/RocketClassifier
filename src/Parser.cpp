@@ -33,7 +33,7 @@ std::string Parser::cleantext(GumboNode* node) {
 void Parser::tokenize(std::string in) {
   std::string alphain;
   for (char& c : in) {
-    if (c >= 32 && c < 255) {
+    if (c >= 0 && c <= 255) {
       alphain.push_back(tolower(c));
     }
   }
