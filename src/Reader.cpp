@@ -15,11 +15,18 @@ void Reader::ReadDir(std::string in_dir) {
   try {
     if (exists(pth) && is_directory(pth)) {
       boost::filesystem::directory_iterator it( pth ), eod;
+      int tot = std::distance(directory_iterator(pth), directory_iterator()), op = -1;
       BOOST_FOREACH( boost::filesystem::path const & p, std::make_pair( it, eod ) ) {
         auto words = ReadFile(p.string());
         file_count++;
         out.insert(std::end(out), std::begin(words), std::end(words));
+        int per = (file_count * 100) / tot;
+        if (op != per) {
+          std::cerr << "\r" << per << "% completed.";
+          op = per;
+        }
       }
+      std::cout << std::endl;
     } else {
       cout << pth << " does not exist\n";
     }

@@ -4,6 +4,7 @@
 
 const std::string spam_path = "./train/spam/training";
 const std::string ham_path = "./train/non_spam/training";
+const std::string store_path = "./traing_data_01.txt";
 
 Bayes::Bayes()
 {
@@ -24,7 +25,7 @@ void Bayes::train() {
 
 void Bayes::saveTrain() {
   using std::endl;
-  std::ofstream fout("saved_file.txt");
+  std::ofstream fout(store_path);
   fout << spam_count << ' ' << ham_count << endl;
   fout << spam_words.size() << endl;
   for (auto& p : spam_words) {
@@ -39,7 +40,7 @@ void Bayes::saveTrain() {
 }
 
 bool Bayes::readTrain() {
-  std::ifstream fin("saved_file.txt");
+  std::ifstream fin(store_path);
   if (!fin) {
     DEBUG std::cerr << "No saved training data found.\n";
     return 0;

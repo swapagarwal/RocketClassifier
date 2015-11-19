@@ -32,9 +32,11 @@ std::string Parser::cleantext(GumboNode* node) {
 
 void Parser::tokenize(std::string in) {
   std::string alphain;
-  for (auto& c : in) {
-    if (c >= 32 && c < 128) {
+  for (char& c : in) {
+    if (c >= 32 && c < 255) {
       alphain.push_back(tolower(c));
+    } else {
+      // alphain.push_back(' ');
     }
   }
   stemming::english_stem<> StemEnglish;
