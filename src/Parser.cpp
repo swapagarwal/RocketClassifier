@@ -35,8 +35,6 @@ void Parser::tokenize(std::string in) {
   for (char& c : in) {
     if (c >= 32 && c < 255) {
       alphain.push_back(tolower(c));
-    } else {
-      // alphain.push_back(' ');
     }
   }
   stemming::english_stem<> StemEnglish;

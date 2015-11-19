@@ -4,7 +4,7 @@
 
 const std::string spam_path = "./train/spam/training";
 const std::string ham_path = "./train/non_spam/training";
-const std::string store_path = "./traing_data_01.txt";
+const std::string store_path = "./saved_file.txt";
 
 Bayes::Bayes()
 {
@@ -16,8 +16,10 @@ Bayes::Bayes()
 
 void Bayes::train() {
   Reader spam_reader(spam_path), ham_reader(ham_path);
+  DEBUG std::cerr << "Training spam\n";
   spam_words = spam_reader.GetWordCount();
   spam_count = spam_reader.GetFileCount();
+  DEBUG std::cerr << "Training non-spam\n";
   ham_words = ham_reader.GetWordCount();
   ham_count = ham_reader.GetFileCount();
   DEBUG std::cerr << "Trained with " << spam_count << " spam with "<< spam_words.size() << " words and " << ham_count << " non-spam documents with " << ham_words.size() << " words.\n";
@@ -76,10 +78,18 @@ void Bayes::test(std::string dir) {
   try {
     if (exists(pth) && is_directory(pth)) {
       boost::filesystem::directory_iterator it(pth), eod;
+      int file_count = 0, tot = std::distance(directory_iterator(pth), directory_iterator()), op = -1;
       BOOST_FOREACH( boost::filesystem::path const & p, std::make_pair( it, eod ) ) {
         auto words = Reader::ReadFile(p.string());
+        file_count++;
+        int per = (file_count * 100) / tot;
+        if (op != per) {
+          std::cerr << "\r" << per << "% completed.";
+          op = per;
+        }
         print(p.string(), query(words));
       }
+      std::cerr << std::endl;
     } else {
       cout << pth << " does not exist\n";
     }
