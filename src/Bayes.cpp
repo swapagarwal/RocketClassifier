@@ -2,8 +2,8 @@
 #include "Reader.h"
 #define DEBUG if(1)
 
-const std::string spam_path = "./train/spam/training";
-const std::string ham_path = "./train/non_spam/training";
+const std::string spam_path = "./train/spam/test";
+const std::string ham_path = "./train/non_spam/test";
 const std::string store_path = "./saved_file.txt";
 
 Bayes::Bayes()

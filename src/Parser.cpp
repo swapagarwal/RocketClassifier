@@ -33,12 +33,32 @@ std::string Parser::cleantext(GumboNode* node) {
 void Parser::tokenize(std::string in) {
   std::string alphain;
   for (char& c : in) {
-    if (c >= 0 && c <= 255) {
+    if (c > 127 || c < 0) {
+      alphain.push_back(' ');
+    } else {
       alphain.push_back(tolower(c));
     }
   }
+
+  alphain = boost::regex_replace(alphain, boost::regex("<[^<>]+>"), string(" "));
+  alphain = boost::regex_replace(alphain, boost::regex("[0-9]+"), string(" number "));
+  alphain = boost::regex_replace(alphain, boost::regex("(http|https)://[^\\s]*"), string(" httpaddr "));
+  alphain = boost::regex_replace(alphain, boost::regex("[^\\s]+@[^\\s]+"), string(" emailaddr "));
+  alphain = boost::regex_replace(alphain, boost::regex("[$]+"), string(" dollar "));
+
+  in = alphain;
+  alphain = "";
+
+  for (char& c : in) {
+    if (ispunct(c) || isspace(c)) {
+      alphain.push_back(' ');
+    } else {
+      alphain.push_back(c);
+    }
+  }
+
   stemming::english_stem<> StemEnglish;
-  boost::char_separator<char> sep(".,:-\n\t ");
+  boost::char_separator<char> sep{" \t\n.,"};
   boost::tokenizer<boost::char_separator<char>> tokens(alphain, sep);
   for (const auto& t : tokens) {
     std::wstring word(t.begin(), t.end());

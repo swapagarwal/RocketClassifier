@@ -1,10 +1,11 @@
 # depslib dependency file v1.0
 15051376 <<<<<<< Updated upstream
 
-1447892841 source:/home/nishant/RocketClassifier/main.cpp
+1447959031 source:/home/nishant/RocketClassifier/main.cpp
 	<iostream>
 	<string>
 	"Bayes.h"
+	"../stem/stemming/english_stem.h"
 
 1447679964 shed changes
 	<iostream>
@@ -16,11 +17,11 @@
 
 1447679939 ated upstream
 
-1447893708 source:/home/nishant/RocketClassifier/src/Parser.cpp
+1447960489 source:/home/nishant/RocketClassifier/src/Parser.cpp
 	"Parser.h"
 	"gumbo.h"
 
-1447731266 /home/nishant/RocketClassifier/include/Parser.h
+1447951684 /home/nishant/RocketClassifier/include/Parser.h
 	<iostream>
 	<vector>
 	<string>
@@ -29,6 +30,8 @@
 	<boost/tokenizer.hpp>
 	<cctype>
 	"gumbo.h"
+	<regex>
+	<boost/regex.hpp>
 	"../stem/stemming/english_stem.h"
 
 1447723922 /usr/local/include/gumbo.h
@@ -84,7 +87,7 @@
 	<fstream>
 	<iterator>
 
-1447891426 source:/home/nishant/RocketClassifier/src/Reader.cpp
+1447956692 source:/home/nishant/RocketClassifier/src/Reader.cpp
 	"Reader.h"
 	"Parser.h"
 
@@ -103,7 +106,7 @@
 	<map>
 	<string>
 
-1447893101 source:/home/nishant/RocketClassifier/src/Bayes.cpp
+1447960497 source:/home/nishant/RocketClassifier/src/Bayes.cpp
 	"Bayes.h"
 	"Reader.h"
 

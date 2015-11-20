@@ -16,7 +16,7 @@
 					<Add directory="include" />
 				</Compiler>
 				<Linker>
-					<Add option="-lboost_filesystem" />
+					<Add option="-lboost_filesystem -lboost_regex" />
 				</Linker>
 			</Target>
 			<Target title="Release">

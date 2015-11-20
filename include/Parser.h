@@ -9,6 +9,8 @@
 #include <boost/tokenizer.hpp>
 #include <cctype>
 #include "gumbo.h"
+#include <regex>
+#include <boost/regex.hpp>
 #include "../stem/stemming/english_stem.h"
 
 using namespace std;
